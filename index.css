@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Poppins:wght@500&family=Tilt+Prism&family=Tilt+Warp&display=swap');
+
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lato', sans-serif;
+}
+
+body{
+  background: #a5a5ff;
+}
+
+.quote-box{
+  background: #e9e9ff;
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+
+}
+
+.quote-box h2{
+  font-family: 'Tilt Prism', cursive;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.quote-box h2::after{
+content: '';
+width: 650px;
+height: 1px;
+border-radius: 1px;
+background: #8d8dff;
+position: absolute;
+bottom: +110px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.quote-box blockquote{
+  font-size: 22px;
+  min-height: 110px;
+}
+
+.quote-box blockquote::before, .quote-box blockquote::after{
+  content: '"';
+}
+
+.quote-box span{
+  display: block;
+  margin-top: 10px;
+  float: right;
+  position: relative;
+}
+
+.quote-box span::before{
+content: '';
+width: 20px;
+height: 2px;
+background:#9191ff;
+position: absolute;
+top: 60%;
+left: -30px;
+}
+
+.quote-box div{
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-box button{
+  background:#9d9dfd;
+  font-family:'Lato', sans-serif;
+  color:#000000;
+  border-radius: 25px;
+  border: 1px solid #9898fc;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.quote-box button:hover{
+  box-shadow: 0 4px 8px #000000;
+}
+
+.quote-box button:active{
+  background-color: #fafaff;
+}
+
+.quote-box button img{
+  width: 25px;
+  margin-right: 5px;
+}
+
+.quote-box button:nth-child(2){
+  background: transparent;
+  color: #000000;
+}
+
+.quote-box button:nth-child(2):active{
+  background: transparent;
+  color: #000000;
+  background-color: #8585f8;
+
+}
+
+@media only screen and (max-width: 768px){
+  .quote-box{
+    background: #e9e9ff;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+  
+  }
+
+  .quote-box h2{
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+
+  .quote-box h2::after{
+    content: '';
+    width: 350px;
+    height: 1px;
+    border-radius: 1px;
+    background: #8d8dff;
+    position: absolute;
+    bottom: +110px;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    
+    .quote-box span{
+      display: block;
+      margin-top: 6px;
+      float: right;
+      position: relative;
+    }
+
+    .quote-box span::before{
+      content: '';
+      width: 20px;
+      height: 2px;
+      background:#9191ff;
+      position: absolute;
+      top: 60%;
+      left: -30px;
+      }
+      
+    
+    
+}

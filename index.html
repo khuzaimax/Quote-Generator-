@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+
+  <title>Random Quote Generator</title>
+</head>
+<body>
+
+  <div class="quote-box">
+    <h2>Quote of the Day</h2>
+    <blockquote id="quote"></blockquote>
+    <span id="author"></span>
+
+  <div>
+    <button onclick="copyQuote()"><img src="copy.png">Copy</button>
+    <button onclick="getquote(api_url)">New Quote</button>
+    <button onclick="tweet()"><img src="twitter-logo-white-circle-png-images-23.png">Tweet</button>
+  </div>
+  </div>
+
+  <script>
+    const quote = document.getElementById("quote")
+    const author = document.getElementById("author")
+    const api_url = "https://api.quotable.io/random";
+
+    async function getquote(url){
+    const response = await fetch(url);
+    var data = await response.json();
+    quote.innerHTML = data.content;
+    author.innerHTML = data.author;
+    }
+
+    getquote(api_url);
+
+    function tweet(){
+      window.open("https://twitter.com/intent/tweet?text= "+ quote.innerHTML +   
+      "  --- by " + author.innerHTML, "Tweet window", "width=300" , "height=200");
+
+    }
+
+    function copyQuote() {
+    var quote = document.getElementById("quote");
+    var range = document.createRange();
+
+    range.selectNode(quote);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    
+}
+
+  </script>
+
+</body>
+</html>
