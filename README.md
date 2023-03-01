@@ -1,4 +1,4 @@
-# Quote-GeneQuote Generator
+# Random Quote Generator
 This is a web-based application that generates random quotes using an API and displays them on the page. The project is built using HTML, CSS, and JavaScript. It also allows users to share the quotes on Twitter and copy them to their clipboard.
 
 ## How to use the Quote Generator
