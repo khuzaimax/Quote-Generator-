@@ -26,9 +26,7 @@ JavaScript
 The project also uses the following APIs:
 
 ## Twitter API
-Quote API
+Quote API(https://api.quotable.io/random)
 Credits
 The Quote Generator was created by Khuzaima Umar . Special thanks to the developers of the Twitter API and Quote API for making their services available for use in this project.
 
-## License
-This project is licensed under the MIT License.rator-
